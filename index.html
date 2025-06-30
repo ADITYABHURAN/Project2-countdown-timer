@@ -6,12 +6,15 @@
     <title>Countdown Timer</title>
 </head>
 <body>
-     <div class="container">
+    <div class="timer-container">
         <h1>Countdown Timer</h1>
-        <input type="text" id="timeInput" placeholder="Enter time in seconds">
-        <button id="startButton">Start Countdown</button>
-        <p id="countdownDisplay"> </p>
-        <script src="script.js"></script>
-     </div>
+        <input id="timeInput" type="number" placeholder="Seconds" min="1" />
+        <div id="countdownDisplay"></div>
+        <div class="button-group">
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="resumeButton">Resume</button>
+        </div>
+    </div>
 </body>
 </html>
