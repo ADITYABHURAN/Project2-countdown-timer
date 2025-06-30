@@ -1,93 +1,101 @@
-/* Reset some default styles */
+/* General Reset & Background */
 body {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* Timer Box */
 .timer-container {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(30, 60, 114, 0.2);
-    padding: 40px 32px 32px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 340px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
-h1 {
-    color: #1e3c72;
-    margin-bottom: 24px;
-    letter-spacing: 2px;
-    font-size: 2.2rem;
+/* Title */
+.timer-container h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #1e3c72;
+  letter-spacing: 1px;
 }
 
+/* Countdown Display */
 #countdownDisplay {
-    font-size: 2.5rem;
-    color: #2a5298;
-    margin: 24px 0 32px 0;
-    min-height: 40px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2a5298;
+  margin: 20px 0;
+  min-height: 30px;
 }
 
+/* Input Field */
 input[type="number"] {
-    padding: 10px 16px;
-    border: 2px solid #2a5298;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    outline: none;
-    margin-bottom: 18px;
-    width: 120px;
-    text-align: center;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
 }
 
 input[type="number"]:focus {
-    border-color: #1e3c72;
+  outline: none;
+  border-color: #1e3c72;
 }
 
+/* Button Group */
 .button-group {
-    display: flex;
-    gap: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Buttons */
 button {
-    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.08);
-    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-button:hover, button:focus {
-    background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.15);
-    outline: none;
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
 }
 
-@media (max-width: 500px) {
-    .timer-container {
-        min-width: 90vw;
-        padding: 24px 8vw;
-    }
-    #countdownDisplay {
-        font-size: 1.5rem;
-    }
-    button {
-        padding: 10px 16px;
-        font-size: 1rem;
-    }
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .timer-container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #countdownDisplay {
+    font-size: 1.5rem;
+  }
+
+  button {
+    flex: 1 1 100%;
+  }
 }
